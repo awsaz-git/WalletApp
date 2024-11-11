@@ -40,7 +40,7 @@ class _LandingPageState extends State<LandingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(-12445865),
+        backgroundColor: Color(-15258534),
         elevation: 0,
         title: Text(
           "Good evening, " + getUsername() + " 🌙",
@@ -60,13 +60,7 @@ class _LandingPageState extends State<LandingPage> {
         onTabChange: (index) => navigateBottomBar(index),
       ),
       backgroundColor: Colors.grey[200],
-      body: AnimatedSwitcher(
-        duration: const Duration(milliseconds: 400),
-        transitionBuilder: (Widget child, Animation<double> animation) {
-          return FadeTransition(opacity: animation, child: child);
-        },
-        child: pages[selectedIndex],
-      ).animate()
+      body: pages[selectedIndex]
     );
   }
 }

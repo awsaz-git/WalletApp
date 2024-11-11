@@ -26,7 +26,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(-12445865),
+      backgroundColor: const Color(-15258534),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -82,7 +82,7 @@ class _LoginPageState extends State<LoginPage> {
                             fontFamily: "SF Pro",
                             fontWeight: FontWeight.w900,
                             fontSize: 17,
-                            color: Color(-12445865),
+                            color: Color(-15258534),
                             letterSpacing: 1.75,
                             height: 0.5
                         ),),
@@ -90,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
                             fontFamily: "SF Pro",
                             fontWeight: FontWeight.w700,
                             fontSize: 17,
-                            color: Color(-12445865),
+                            color: Color(-15258534),
                             letterSpacing: 1.75,
                             height: 0.5
                         ),),
@@ -192,7 +192,7 @@ class _LoginPageState extends State<LoginPage> {
                         padding: const EdgeInsets.all(20),
                         width: 300,
                         decoration: BoxDecoration(
-                          color: Color(-12445865),
+                          color: Color(-15258534),
                           borderRadius: BorderRadius.circular(25),
                           boxShadow: [
                             BoxShadow(
@@ -235,7 +235,7 @@ class _LoginPageState extends State<LoginPage> {
                           fontFamily: "SF Pro",
                           fontWeight: FontWeight.w600,
                           fontSize: 18,
-                          color: Color(-12445865),
+                          color: Color(-15258534),
                         ),
                         ),
                       )

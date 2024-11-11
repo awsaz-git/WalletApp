@@ -8,50 +8,56 @@ class MyBottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 20),
+      padding: EdgeInsets.symmetric(vertical: 0),
+      decoration: BoxDecoration(
+        color: Color(-15258534),
+        borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(25),
+            topRight: Radius.circular(25))
+      ),
       child: GNav(
         mainAxisAlignment: MainAxisAlignment.center,
         gap: 2,
-        color: Colors.grey[500],
-          activeColor: Colors.grey[800],
-          tabActiveBorder: Border.all(color: Colors.grey.shade50),
-          tabBackgroundColor: Colors.white,
+        color: Color(-1901549400),
+          activeColor: Colors.white,
+          tabActiveBorder: Border.all(color: Colors.transparent),
+          tabBackgroundColor: Colors.transparent,
           onTabChange: (value) => onTabChange!(value),
           tabs: [
             GButton(
               icon: Icons.home,
               text: 'home',
-              padding: EdgeInsets.all(30),
+              padding: EdgeInsets.only(top: 12, bottom: 12, right: 20, left: 20),
               borderRadius: BorderRadius.circular(37.5),
               textStyle: TextStyle(
                 fontFamily: "SF Pro",
                 fontWeight: FontWeight.w300,
                 fontSize: 18,
-                color: Colors.grey[800],
+                color: Colors.white,
               ),
             ),
             GButton(
               icon: Icons.credit_card,
               text: 'cards',
-              padding: EdgeInsets.all(30),
+              padding: EdgeInsets.only(top: 12, bottom: 12, right: 20, left: 20),
               borderRadius: BorderRadius.circular(37.5),
               textStyle: TextStyle(
                 fontFamily: "SF Pro",
                 fontWeight: FontWeight.w300,
                 fontSize: 18,
-                color: Colors.grey[800],
+                color: Colors.white,
               ),
             ),
             GButton(
               icon: Icons.bar_chart,
               text: 'transactions',
-              padding: EdgeInsets.all(30),
+              padding: EdgeInsets.only(top: 12, bottom: 12, right: 20, left: 20),
               borderRadius: BorderRadius.circular(37.5),
               textStyle: TextStyle(
                 fontFamily: "SF Pro",
                 fontWeight: FontWeight.w300,
                 fontSize: 18,
-                color: Colors.grey[800],
+                color: Colors.white,
               ),
             )
           ]

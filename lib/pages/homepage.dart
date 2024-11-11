@@ -16,11 +16,23 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(-12445865),
-      body:  Column(
+      backgroundColor: const Color(-15258534),
+      body: Column(
         children: [
           const Padding(
-            padding: EdgeInsets.only(top: 100.0, bottom: 150.0),
+            padding: EdgeInsets.only(top: 75.0, bottom: 5.0 ),
+            child: Text(
+              'Available Balance',
+              style: TextStyle(
+                fontFamily: "Poppins",
+                fontWeight: FontWeight.w500,
+                fontSize: 16,
+                color: Colors.white,
+              ),
+            ),
+          ),
+          const Padding(
+            padding: EdgeInsets.only(bottom: 100.0),
             child: Text(
               '1000.0 \$',
               style: TextStyle(
@@ -29,7 +41,8 @@ class _HomePageState extends State<HomePage> {
                 fontSize: 40,
                 letterSpacing: 3,
                 color: Colors.white,
-              ),),
+              ),
+            ),
           ),
           Expanded(
             child: Container(
@@ -46,95 +59,90 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(top: 50.0, bottom: 50.0),
+                    padding: EdgeInsets.only(top: 25.0, bottom: 35.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(
-                          Icons.build_circle_rounded,
-                          color: Colors.grey[400],
-                          size: 90,
-                          shadows: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.135), // Shadow color
-                              spreadRadius: 2, // Spread of the shadow
-                              blurRadius: 10, // Blur effect
-                              offset: const Offset(0, 4), // Shadow position
-                            ),
-                          ],
-                        ),
                         Padding(
-                          padding: EdgeInsets.only(left: 30.0, right: 30.0),
-                          child: Icon(
-                            Icons.build_circle_rounded,
-                            color: Colors.grey[400],
-                            size: 90,
-                            shadows: [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.135), // Shadow color
-                                spreadRadius: 2, // Spread of the shadow
-                                blurRadius: 10, // Blur effect
-                                offset: const Offset(0, 4), // Shadow position
-                              ),
-                            ],
+                          padding: const EdgeInsets.only(left: 0, right: 15),
+                          child: Image.asset(
+                            'lib/images/cliq.png',
+                            height: 35,
                           ),
                         ),
-                        Icon(
-                          Icons.build_circle_rounded,
-                          color: Colors.grey[400],
-                          size: 90,
-                          shadows: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.135), // Shadow color
-                              spreadRadius: 2, // Spread of the shadow
-                              blurRadius: 10, // Blur effect
-                              offset: const Offset(0, 4), // Shadow position
-                            ),
-                          ],
+                        Padding(
+                          padding: const EdgeInsets.only(left: 15, right: 30),
+                          child: Image.asset(
+                            'lib/images/efcom.png',
+                            height: 75,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 15, right: 0),
+                          child: Image.asset(
+                            'lib/images/logo2.png',
+                            height: 40,
+                          ),
                         ),
                       ],
                     ),
                   ),
-                  Container(
-                    width: 400,
-                    height: 150,
-                    decoration: BoxDecoration(
-                        color: Colors.grey[400],
-                        borderRadius: BorderRadius.circular(30),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.135), // Shadow color
-                            spreadRadius: 2, // Spread of the shadow
-                            blurRadius: 10, // Blur effect
-                            offset: const Offset(0, 4), // Shadow position
+                  const Padding(
+                    padding: EdgeInsets.only(bottom: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                            'Exclusive Offers',
+                          style: TextStyle(
+                            fontFamily: "Poppins",
+                            fontWeight: FontWeight.w700,
+                            fontSize: 20,
+                            color: Colors.black,
                           ),
-                        ]
+                        ),
+                      ],
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: ListView.builder(
-                        scrollDirection: Axis.horizontal,
-                        itemCount: 4,
-                        itemBuilder: (context, index) {
-                          return Container(
-                            margin: EdgeInsets.only(right: 8.0),
-                            width: 125,
-                            height: 125,
-                            decoration: BoxDecoration(
-                              color: Colors.grey[800],
-                              borderRadius: BorderRadius.circular(30),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black.withOpacity(0.135),
-                                  spreadRadius: 2,
-                                  blurRadius: 10,
-                                  offset: const Offset(0, 4),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 5.0),
+                    child: Container(
+                      width: 1000,
+                      height: 1,
+                      color: Colors.grey,
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.grey[200]
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: ListView.builder(
+                          itemCount: 3,
+                          itemBuilder: (context, index) {
+                            return Padding(
+                              padding: const EdgeInsets.all(12),
+                              child: Container(
+                                height: 100,
+                                decoration: BoxDecoration(
+                                  color: Colors.grey[400],
+                                  borderRadius: BorderRadius.circular(25),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black.withOpacity(0.135),
+                                      spreadRadius: 2,
+                                      blurRadius: 10,
+                                      offset: const Offset(0, 4),
+                                    ),
+                                  ]
                                 ),
-                              ],
-                            ),
-                          );
-                        },
-                      )
+                              )
+                            );
+                          },
+                        )
+                      ),
                     ),
                   ),
                 ],
